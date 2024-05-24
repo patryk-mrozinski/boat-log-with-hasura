@@ -20,6 +20,7 @@ const BoatsPage = () => {
 
       <div>
         {boats.map((boat) => (
+          <BoatCard key={boat.id} boat={boat} />
         ))}
       </div>
     </div>
