@@ -14,5 +14,8 @@ module.exports = {
     "gatsby-plugin-theme-ui",
     "gatsby-plugin-postcss",
     `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
