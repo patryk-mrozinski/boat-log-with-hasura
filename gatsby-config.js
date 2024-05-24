@@ -10,5 +10,9 @@ module.exports = {
     title: `boat-log`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ["gatsby-plugin-theme-ui"],
+  plugins: [
+    "gatsby-plugin-theme-ui",
+    "gatsby-plugin-postcss",
+    `gatsby-plugin-sass`,
+  ],
 };
