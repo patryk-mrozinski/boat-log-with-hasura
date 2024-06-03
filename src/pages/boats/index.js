@@ -16,9 +16,9 @@ const BoatsPage = () => {
 
   return (
     <div className="container mx-auto my-4">
-      <h1 className="text-3xl font-bold underline">Hello</h1>
+      <h1 className="text-3xl font-bold underline">Your boats</h1>
 
-      <div>
+      <div className="grid md:grid-cols-2">
         {boats.map((boat) => (
           <BoatCard key={boat.id} boat={boat} />
         ))}
