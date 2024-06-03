@@ -3,11 +3,11 @@ import * as React from "react";
 import useAllBoats from "../hooks/useAllBoats";
 
 const IndexPage = () => {
-  const { data, loading, error } = useAllBoats();
-
-  console.log({ data, loading, error });
-
-  return <div>Hello</div>;
+  return (
+    <div>
+      <h1 className="text-3xl font-bold underline">Hello</h1>
+    </div>
+  );
 };
 
 export default IndexPage;

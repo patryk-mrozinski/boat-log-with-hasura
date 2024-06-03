@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
-const GET_ALL_BOATS = gql`
-  query AllBoats {
-    boats {
+const GET_BOAT = gql`
+  query GetBoatById($id: uuid!) {
+    boat: boats_by_pk(id: $id) {
       id
       kind
       length
@@ -13,4 +13,4 @@ const GET_ALL_BOATS = gql`
   }
 `;
 
-export default GET_ALL_BOATS;
+export default GET_BOAT;

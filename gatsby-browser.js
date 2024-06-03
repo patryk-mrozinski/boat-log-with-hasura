@@ -1,3 +1,5 @@
+import "./src/styles/global.scss";
+
 import React from "react";
 import PropTypes from "prop-types";
 import {
