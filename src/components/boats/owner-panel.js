@@ -49,7 +49,9 @@ const OwnerPanel = ({ boat }) => {
         Create new draft trip
       </button>
 
-      {showCreateFrom && <CreateForm closeFormModal={closeFormModal} />}
+      {showCreateFrom && (
+        <CreateForm closeFormModal={closeFormModal} boatId={boat.id} />
+      )}
     </div>
   );
 };

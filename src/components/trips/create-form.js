@@ -1,8 +1,13 @@
 import * as React from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import DateField from "./datetime-filed";
+import useCreateTrip from "../../hooks/useCreateTrip";
 
-const CreateForm = ({ closeFormModal }) => {
+const DRAFT_STATUS = "draft";
+
+const CreateForm = ({ closeFormModal, boatId }) => {
+  const [createTrip, { data, loading, error }] = useCreateTrip();
+
   const methods = useForm();
   const {
     register,
@@ -11,7 +16,15 @@ const CreateForm = ({ closeFormModal }) => {
   } = methods;
 
   const onSubmit = (data) => {
-    console.log(data);
+    createTrip({
+      variables: {
+        data: {
+          ...data,
+          current_status: DRAFT_STATUS,
+          boat_id: boatId,
+        },
+      },
+    });
 
     closeFormModal();
   };
@@ -22,8 +35,8 @@ const CreateForm = ({ closeFormModal }) => {
         <FormProvider {...methods}>
           <form onSubmit={handleSubmit(onSubmit)} className="rounded-lg">
             <div className="flex flex-wrap items-center space-x-4 my-4 m-6">
-              <DateField name="start-time" label="Start Date" />
-              <DateField name="estimated-end-time" label="Estimated finish" />
+              <DateField name="start_time" label="Start Date" />
+              <DateField name="estimated_end_time" label="Estimated finish" />
             </div>
 
             <div className="flex flex-wrap items-center space-x-4 my-4 m-6">
