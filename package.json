@@ -19,6 +19,7 @@
     "@emotion/react": "^11.11.4",
     "@mdx-js/react": "^3.0.1",
     "@theme-ui/mdx": "^0.16.2",
+    "dayjs": "^1.11.11",
     "dotenv": "^16.4.5",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
@@ -28,7 +29,9 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
+    "react-datetime-picker": "^6.0.1",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.5",
     "sass": "^1.77.2",
     "theme-ui": "^0.16.2"
   },
