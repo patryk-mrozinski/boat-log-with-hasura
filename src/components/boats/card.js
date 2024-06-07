@@ -2,7 +2,7 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
-const BoatCard = (boatData) => {
+const Card = (boatData) => {
   const boat = boatData.boat;
 
   return (
@@ -13,7 +13,7 @@ const BoatCard = (boatData) => {
       >
         <StaticImage
           className="object-cover w-11/12 rounded-lg h-auto"
-          src="../images/sample-image.JPG"
+          src="../../images/sample-image.JPG"
           alt="Boat"
         />
 
@@ -33,4 +33,4 @@ const BoatCard = (boatData) => {
   );
 };
 
-export default BoatCard;
+export default Card;
