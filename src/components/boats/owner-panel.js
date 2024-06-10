@@ -36,7 +36,9 @@ const OwnerPanel = ({ boat }) => {
     <div>
       <h2>Has trip in progress: {tripInProgressMessage}</h2>
       <Link
-        to="#"
+        state={{ boatId: boat.id }}
+        params={boat.id}
+        to="../../trips"
         className="flex flex-col my-3 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         Trip History({finishedTrips})
