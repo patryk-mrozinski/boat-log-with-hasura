@@ -1,6 +1,6 @@
 import * as React from "react";
 import useAllBoats from "../../hooks/useAllBoats";
-import BoatCard from "../../components/boat-card";
+import Card from "../../components/boats/card";
 
 const BoatsPage = () => {
   const { data: boatsData, loading, error } = useAllBoats();
@@ -20,7 +20,7 @@ const BoatsPage = () => {
 
       <div className="grid md:grid-cols-2">
         {boats.map((boat) => (
-          <BoatCard key={boat.id} boat={boat} />
+          <Card key={boat.id} boat={boat} />
         ))}
       </div>
     </div>
